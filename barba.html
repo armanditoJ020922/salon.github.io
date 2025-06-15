@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Barba y Bigote</title>
+  <title>Barba y Bigote</title> 
 
-  <!-- Google Fonts -->
+  <link rel="icon" type="image/png" href="k.png">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -26,8 +26,14 @@
     }
 
     .container {
-      max-width: 600px;
+      max-width: 700px;
       width: 100%;
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      animation: fadeInDown 1s ease-out;
     }
 
     h1 {
@@ -36,26 +42,29 @@
       color: #b05574;
       margin-bottom: 20px;
       font-weight: 700;
-      animation: fadeInDown 1s ease-out;
     }
 
     .text-content {
       font-family: monospace;
       font-size: 20px;
       color: #b05574;
-      white-space: normal;
-      line-height: 1.5;
-      margin-bottom: 30px;
-      padding: 0 10px;
+      white-space: pre-wrap;
       border-right: 2px solid #b05574;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: escribir 6s steps(100, end) forwards;
+      min-height: 150px;
     }
 
-    @keyframes escribir {
-      from { width: 0; }
-      to { width: 100%; }
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #b05574;
+      animation: blink 0.7s steps(1) infinite;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
     }
 
     @keyframes fadeInDown {
@@ -69,9 +78,22 @@
       }
     }
 
+    .im {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .im img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
     .volver-btn {
       display: block;
-      margin: 30px auto 0;
+      margin: 0 auto 20px;
       padding: 12px 28px;
       font-size: 16px;
       font-weight: bold;
@@ -114,25 +136,59 @@
       }
 
       .volver-btn {
-        font-size: 14px;
+        font-size: 13px;
         padding: 10px 16px;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <h1>- Arreglo de Barba y Bigote:</h1>
-    <div class="text-content">
-      - Técnicas:<br>
-      &nbsp;&nbsp;• Corte de barba: tijeras, máquina, navaja.<br>
-      &nbsp;&nbsp;• Arreglo de bigote: corte, peinado.<br>
-      &nbsp;&nbsp;• Arreglo de patilla: recorte, forma.<br>
-      - Precios: desde $100 hasta $500 pesos mexicanos.<br>
-      - Tiempo de realización: 15 a 30 minutos.
-    </div>
+    <h1>- Arreglo de Barba y Bigote -</h1>
+    <div class="text-content" id="typing-area"></div>
+    <span class="cursor" id="cursor"></span>
   </div>
 
-  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+  <div class="im">
+  </div>
+
+  <a href="index.html" class="volver-btn">Volver a la página principal</a>
+
+  <script>
+    const lines = [
+      "🧔 Técnicas:",
+      "- Corte de barba: tijeras, máquina, navaja.",
+      "- Arreglo de bigote: corte, peinado.",
+      "- Arreglo de patilla: recorte, forma.",
+      "💰 Precios: desde $100 hasta $500 pesos mexicanos.",
+      "⏳ Tiempo de realización: 15 a 30 minutos."
+    ];
+
+    const typingArea = document.getElementById("typing-area");
+    const cursor = document.getElementById("cursor");
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function typeLine() {
+      if (lineIndex < lines.length) {
+        if (charIndex < lines[lineIndex].length) {
+          typingArea.innerHTML += lines[lineIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeLine, 40);
+        } else {
+          typingArea.innerHTML += "\n";
+          lineIndex++;
+          charIndex = 0;
+          setTimeout(typeLine, 400);
+        }
+      } else {
+        cursor.style.display = "none"; // ocultar cursor al terminar
+      }
+    }
+
+    typeLine();
+  </script>
+
 </body>
 </html>

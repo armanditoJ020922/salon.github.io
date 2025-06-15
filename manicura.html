@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Servicios de Uñas</title>
-
-  <!-- Google Fonts -->
+  <link rel="icon" type="image/png" href="k.png">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
     * {
@@ -27,7 +27,7 @@
     }
 
     .man {
-      max-width: 800px;
+      max-width: 900px;
       width: 100%;
       background: #fff0f5;
       padding: 30px;
@@ -38,12 +38,19 @@
 
     h1 {
       color: #b05574;
-      font-size: 24px;
+      font-size: 22px;
       margin-top: 30px;
       text-align: center;
     }
 
-    p, li, br {
+    .escritura {
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #b05574;
+      animation: escribir 6s steps(100, end) forwards;
+    }
+
+    p, li {
       margin: 8px 0;
       font-size: 17px;
     }
@@ -52,28 +59,14 @@
       padding-left: 20px;
     }
 
-    /* Efecto de escritura */
-    .escritura {
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid #b05574;
-      animation: escribir 6s steps(100, end) forwards;
-    }
-
     @keyframes escribir {
       from { width: 0; }
       to { width: 100%; }
     }
 
     @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .volver-btn {
@@ -100,23 +93,56 @@
       transform: scale(1.05);
     }
 
+    nav {
+      background: #ffe3ed;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #b05574;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+    }
+
+    section:nth-child(odd) {
+      background-color: #fff8fc;
+    }
+
+    section h2 {
+      color: #b05574;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .icono {
+      margin-right: 8px;
+    }
+
     @media (max-width: 600px) {
-      .man {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      p, li {
-        font-size: 15px;
-      }
-
-      .volver-btn {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
+      h1 { font-size: 20px; }
+      p, li { font-size: 15px; }
+      .volver-btn { font-size: 14px; padding: 10px 20px; }
     }
   </style>
 </head>
@@ -125,79 +151,100 @@
   <div class="man">
     <h1 class="escritura">Servicios de Uñas</h1>
 
-    <h1>Manicura y Pedicura</h1>
-    <p>- Manicura básica: corte de uñas, limado, etc.</p>
-    <p>- Pedicura básica: corte de uñas, limado, etc.</p>
-    <p>- Manicura y pedicura con gel: aplicación de gel, diseño, etc.</p>
-    <p>💰 Precios: $200 a $1,000 MXN</p>
-    <p>⏱ Tiempo: 30 min a 1 hora</p>
+    <!-- Índice de navegación -->
+    <nav>
+      <a href="#manicura">Manicura</a>
+      <a href="#aplicacion">Aplicación</a>
+      <a href="#decoracion">Decoración</a>
+      <a href="#mantenimiento">Mantenimiento</a>
+      <a href="#precios-tecnica">Precios</a>
+      <a href="#duracion">Duraciones</a>
+    </nav>
 
-    <h1>Técnicas de Aplicación</h1>
-    <p>- Uñas de Gel</p>
-    <p>- Uñas de Acryl</p>
-    <p>- Uñas de Tips</p>
-    <p>- Uñas Esculpidas</p>
-    <p>- Diseño artístico</p>
+    <section id="manicura">
+      <h2><i class="fas fa-hand-sparkles icono"></i>Manicura y Pedicura</h2>
+      <p>- Manicura básica: corte de uñas, limado, etc.</p>
+      <p>- Pedicura básica: corte de uñas, limado, etc.</p>
+      <p>- Manicura y pedicura con gel: aplicación de gel, diseño, etc.</p>
+      <p>💰 Precios: $200 a $1,000 MXN</p>
+      <p>⏱ Tiempo: 30 min a 1 hora</p>
+    </section>
 
-    <h1>Técnicas de Decoración</h1>
-    <p>- Pintura con esmalte</p>
-    <p>- Dibujo artístico</p>
-    <p>- Decoraciones: strass, glitter, etc.</p>
+    <section id="aplicacion">
+      <h2><i class="fas fa-brush icono"></i>Técnicas de Aplicación</h2>
+      <p>- Uñas de Gel</p>
+      <p>- Uñas de Acryl</p>
+      <p>- Uñas de Tips</p>
+      <p>- Uñas Esculpidas</p>
+      <p>- Diseño artístico</p>
+    </section>
 
-    <h1>Mantenimiento de Uñas</h1>
-    <p>- Relleno</p>
-    <p>- Corrección</p>
-    <p>- Mantenimiento regular</p>
+    <section id="decoracion">
+      <h2><i class="fas fa-gem icono"></i>Técnicas de Decoración</h2>
+      <p>- Pintura con esmalte</p>
+      <p>- Dibujo artístico</p>
+      <p>- Decoraciones: strass, glitter, etc.</p>
+    </section>
 
-    <h1>Precios por Técnica</h1>
-    <ul>
-      <li>Gel: $500 - $1,500</li>
-      <li>Acryl: $800 - $2,500</li>
-      <li>Tips: $300 - $1,000</li>
-      <li>Esculpidas: $1,000 - $3,000</li>
-      <li>Diseño: $200 - $500</li>
-    </ul>
+    <section id="mantenimiento">
+      <h2><i class="fas fa-tools icono"></i>Mantenimiento de Uñas</h2>
+      <p>- Relleno</p>
+      <p>- Corrección</p>
+      <p>- Mantenimiento regular</p>
+    </section>
 
-    <h1>Precios por Decoración</h1>
-    <ul>
-      <li>Pintura: $100 - $300</li>
-      <li>Dibujo: $200 - $500</li>
-      <li>Decoraciones: $100 - $300</li>
-    </ul>
+    <section id="precios-tecnica">
+      <h2><i class="fas fa-dollar-sign icono"></i>Precios por Técnica</h2>
+      <ul>
+        <li>Gel: $500 - $1,500</li>
+        <li>Acryl: $800 - $2,500</li>
+        <li>Tips: $300 - $1,000</li>
+        <li>Esculpidas: $1,000 - $3,000</li>
+        <li>Diseño: $200 - $500</li>
+      </ul>
 
-    <h1>Precios de Mantenimiento</h1>
-    <ul>
-      <li>Relleno: $300 - $800</li>
-      <li>Corrección: $200 - $500</li>
-      <li>Mantenimiento: $100 - $300</li>
-    </ul>
+      <h2>Precios por Decoración</h2>
+      <ul>
+        <li>Pintura: $100 - $300</li>
+        <li>Dibujo: $200 - $500</li>
+        <li>Decoraciones: $100 - $300</li>
+      </ul>
 
-    <h1>Duración de Técnicas</h1>
-    <ul>
-      <li>Gel: 30 min - 1 hr</li>
-      <li>Acryl: 45 min - 2 hrs</li>
-      <li>Tips: 30 min - 1 hr</li>
-      <li>Esculpidas: 1 - 2 hrs</li>
-      <li>Diseño: 15 - 30 min</li>
-    </ul>
+      <h2>Precios de Mantenimiento</h2>
+      <ul>
+        <li>Relleno: $300 - $800</li>
+        <li>Corrección: $200 - $500</li>
+        <li>Mantenimiento: $100 - $300</li>
+      </ul>
+    </section>
 
-    <h1>Duración de Decoraciones</h1>
-    <ul>
-      <li>Pintura: 15 - 30 min</li>
-      <li>Dibujo: 30 min - 1 hr</li>
-      <li>Decoraciones: 15 - 30 min</li>
-    </ul>
+    <section id="duracion">
+      <h2><i class="fas fa-clock icono"></i>Duración de Técnicas</h2>
+      <ul>
+        <li>Gel: 30 min - 1 hr</li>
+        <li>Acryl: 45 min - 2 hrs</li>
+        <li>Tips: 30 min - 1 hr</li>
+        <li>Esculpidas: 1 - 2 hrs</li>
+        <li>Diseño: 15 - 30 min</li>
+      </ul>
 
-    <h1>Duración del Mantenimiento</h1>
-    <ul>
-      <li>Relleno: 30 min - 1 hr</li>
-      <li>Corrección: 15 - 30 min</li>
-      <li>Mantenimiento: 15 - 30 min</li>
-    </ul>
+      <h2>Duración de Decoraciones</h2>
+      <ul>
+        <li>Pintura: 15 - 30 min</li>
+        <li>Dibujo: 30 min - 1 hr</li>
+        <li>Decoraciones: 15 - 30 min</li>
+      </ul>
+
+      <h2>Duración del Mantenimiento</h2>
+      <ul>
+        <li>Relleno: 30 min - 1 hr</li>
+        <li>Corrección: 15 - 30 min</li>
+        <li>Mantenimiento: 15 - 30 min</li>
+      </ul>
+    </section>
   </div>
 
-  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+  <a href="index.html" class="volver-btn">Volver a la página principal</a>
 
 </body>
 </html>
-

@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teñido de Cabello</title>
-
-  <!-- Fuente Google Quicksand -->
+  <link rel="icon" type="image/png" href="k.png">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -48,16 +47,9 @@
       font-family: monospace;
       font-size: 20px;
       color: #b05574;
-      white-space: nowrap;
-      overflow: hidden;
+      white-space: pre-wrap;
       border-right: 2px solid #b05574;
-      animation: escribir 6s steps(100, end) forwards;
-      padding: 10px 15px;
-    }
-
-    @keyframes escribir {
-      from { width: 0; }
-      to { width: 100%; }
+      min-height: 150px;
     }
 
     @keyframes fadeInDown {
@@ -139,21 +131,45 @@
 
   <div class="container">
     <h1>- Teñido de Cabello -</h1>
-    <div class="text-content">
-      ✨ Técnicas:<br>
-      - Tintes permanentes: tinte con amoníaco, sin amoníaco.<br>
-      - Tintes semipermanentes: con colorante vegetal o sintético.<br>
-      - Tintes temporales: spray o tizas de color.<br>
-      💰 Precios: desde $500 hasta $2,500 MXN.<br>
-      ⏳ Tiempo estimado: 1 a 3 horas.
-    </div>
+    <div class="text-content" id="typing-area"></div>
   </div>
 
   <div class="im">
-    <img src="teñido.jpg" alt="" />
   </div>
 
-  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+  <a href="index.html" class="volver-btn">Volver a la página principal</a>
+
+  <script>
+    const lines = [
+      "✨ Técnicas:",
+      "- Tintes permanentes: tinte con amoníaco, sin amoníaco.",
+      "- Tintes semipermanentes: con colorante vegetal o sintético.",
+      "- Tintes temporales: spray o tizas de color.",
+      "💰 Precios: desde $500 hasta $2,500 MXN.",
+      "⏳ Tiempo estimado: 1 a 3 horas."
+    ];
+
+    const typingArea = document.getElementById("typing-area");
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function typeLine() {
+      if (lineIndex < lines.length) {
+        if (charIndex < lines[lineIndex].length) {
+          typingArea.innerHTML += lines[lineIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeLine, 40);
+        } else {
+          typingArea.innerHTML += "\n";
+          lineIndex++;
+          charIndex = 0;
+          setTimeout(typeLine, 400); // Espera entre líneas
+        }
+      }
+    }
+
+    typeLine();
+  </script>
 
 </body>
 </html>
