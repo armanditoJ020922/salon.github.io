@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tratamientos capilares</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffeef8, #fdd9ea);
+      font-family: 'Quicksand', sans-serif;
+      color: #5c3a4d;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      color: #b05574;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .card {
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .t {
+      font-size: 18px;
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #b05574;
+      width: 0;
+      animation: escribir 5s steps(80, end) forwards;
+      margin-bottom: 20px;
+      color: #b05574;
+    }
+
+    ul {
+      list-style: "🌸 ";
+      padding-left: 25px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      transition: transform 0.2s;
+    }
+
+    li:hover {
+      transform: translateX(5px);
+    }
+
+    .info {
+      font-size: 18px;
+      color: #5c3a4d;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .volver-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #f9b5d0;
+      color: #5c3a4d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .volver-btn:hover {
+      background-color: #f57cb4;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @keyframes escribir {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .card {
+        max-width: 90%;
+        padding: 15px;
+      }
+
+      .t {
+        font-size: 16px;
+        white-space: normal; /* para que el texto pueda hacer wrap */
+        border-right: none; /* quitar cursor de máquina de escribir para mejor legibilidad */
+        animation: none;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      .info {
+        font-size: 16px;
+        margin-top: 12px;
+      }
+
+      .volver-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .card {
+        padding: 12px;
+      }
+
+      .t {
+        font-size: 14px;
+      }
+
+      ul {
+        padding-left: 15px;
+      }
+
+      .info {
+        font-size: 14px;
+      }
+
+      .volver-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>- Tratamientos capilares -</h1>
+
+  <div class="card">
+    <div class="t">
+      <ul>
+        <li><strong>Hidratación profunda:</strong> mascarilla hidratante, aceite de argán.</li>
+        <li><strong>Reparación de daños:</strong> proteínas, queratina.</li>
+        <li><strong>Cabello seco:</strong> mascarilla hidratante, aceite de coco.</li>
+        <li><strong>Cabello dañado:</strong> proteínas, queratina.</li>
+      </ul>
+    </div>
+
+    <div class="info">
+      <p><strong>💰 Precios:</strong> desde $500 hasta $2,000 pesos mexicanos.</p>
+      <p><strong>⏳ Tiempo de realización:</strong> 30 minutos a 2 horas.</p>
+    </div>
+
+    <!-- 🌸 Botón para volver a la página principal -->
+    <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+  </div>
+
+</body>
+</html>

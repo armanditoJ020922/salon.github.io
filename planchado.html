@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planchado y Base Permanente</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffeef8, #fdd9ea);
+      font-family: 'Quicksand', sans-serif;
+      color: #5c3a4d;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      color: #b05574;
+      margin-bottom: 20px;
+      min-height: 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #b05574;
+      width: fit-content;
+      margin: 0 auto 20px;
+      animation: typing 3s steps(40, end), blink 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .card {
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: "💇‍♀️ ";
+      padding-left: 25px;
+    }
+
+    .volver-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #f9b5d0;
+      color: #5c3a4d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .volver-btn:hover {
+      background-color: #f57cb4;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .card {
+        padding: 15px;
+      }
+      p, li {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+      p, li {
+        font-size: 14px;
+      }
+      .card {
+        padding: 12px;
+      }
+      .volver-btn {
+        font-size: 13px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="typewriter"></h1>
+
+  <div class="card">
+    <h2>Planchado (Alisado)</h2>
+    <ul>
+      <li><strong>Planchado tradicional:</strong> Liso temporal – Hasta el próximo lavado</li>
+      <li><strong>Tiempo:</strong> 1 – 1.5 horas</li>
+      <li><strong>Precio:</strong> $200 – $450 MXN</li>
+      <li><strong>Alisado con keratina:</strong> Liso natural y sin frizz</li>
+      <li><strong>Duración:</strong> 2 – 4 meses</li>
+      <li><strong>Tiempo:</strong> 2 – 3 horas</li>
+      <li><strong>Precio:</strong> $700 – $1,800 MXN</li>
+      <li><strong>Alisado japonés o brasileño:</strong> Liso duradero (tabla o con movimiento)</li>
+      <li><strong>Duración:</strong> 6 – 12 meses</li>
+      <li><strong>Tiempo:</strong> 3 – 5 horas</li>
+      <li><strong>Precio:</strong> $1,500 – $3,000 MXN</li>
+    </ul>
+
+    <h2>Base Permanente (Ondulado o Rizado)</h2>
+    <ul>
+      <li><strong>Estilo:</strong> Rizos pequeños, medios o grandes</li>
+      <li><strong>Duración del efecto:</strong> 2 – 4 meses</li>
+      <li><strong>Tiempo de aplicación:</strong> 1.5 – 3 horas</li>
+      <li><strong>Precio:</strong> $400 – $1,000 MXN</li>
+    </ul>
+
+    <h2>Recomendaciones</h2>
+    <ul>
+      <li>No lavar el cabello durante las primeras 48 horas.</li>
+      <li>Usar champús sin sulfato ni sal.</li>
+      <li>Realizar prueba de sensibilidad antes del servicio.</li>
+      <li>Ideal para facilitar el peinado diario o renovar el look.</li>
+    </ul>
+  </div>
+
+  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+
+  <script>
+    const text = "Planchado y Base Permanente";
+    let i = 0;
+    const speed = 60;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios de Maquillaje</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffeef8, #fdd9ea);
+      font-family: 'Quicksand', sans-serif;
+      color: #5c3a4d;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      color: #b05574;
+      margin-bottom: 20px;
+      min-height: 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #b05574;
+      width: fit-content;
+      margin: 0 auto 20px;
+      animation: typing 3s steps(40, end), blink 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .card {
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .volver-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #f9b5d0;
+      color: #5c3a4d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .volver-btn:hover {
+      background-color: #f57cb4;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .card {
+        padding: 15px;
+      }
+      p, li {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+      p, li {
+        font-size: 14px;
+      }
+      .card {
+        padding: 12px;
+      }
+      .volver-btn {
+        font-size: 13px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="typewriter"></h1>
+
+  <div class="card">
+    <h2>- Maquillaje:</h2>
+    <ul>
+      <li><strong>Técnicas:</strong></li>
+      <ul>
+        <li>Maquillaje para eventos: natural, dramático, etc.</li>
+        <li>Maquillaje social: diario, de noche, etc.</li>
+        <li>Maquillaje para novias: clásico, moderno, etc.</li>
+      </ul>
+      <li><strong>Precios:</strong> desde $500 hasta $2,000 pesos mexicanos.</li>
+      <li><strong>Tiempo de realización:</strong> 30 minutos a 2 horas.</li>
+    </ul>
+  </div>
+
+  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+
+  <script>
+    const text = "Servicios de Maquillaje";
+    let i = 0;
+    const speed = 60;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+
+</body>
+</html>

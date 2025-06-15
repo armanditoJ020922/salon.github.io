@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Depilación de cejas y laminado</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #ffeef8, #fdd9ea);
+      margin: 0;
+      padding: 20px;
+      font-family: 'Quicksand', sans-serif;
+      color: #5c3a4d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #b05574;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .texto {
+      font-family: monospace;
+      font-size: 18px;
+      color: #b05574;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #b05574;
+      animation: escribir 6s steps(120, end) forwards;
+      padding: 10px;
+      line-height: 1.6;
+    }
+
+    @keyframes escribir {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .volver-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #f9b5d0;
+      color: #5c3a4d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: fit-content;
+      text-align: center;
+    }
+
+    .volver-btn:hover {
+      background-color: #f57cb4;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 26px;
+      }
+      .texto {
+        font-size: 16px;
+      }
+      .volver-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>- Depilación de ceja y laminado -</h1>
+    <div class="texto">
+      ✨ Técnicas:<br>
+      - Depilación con cera: cera caliente, cera fría, etc.<br>
+      - Depilación con hilo: hilo de seda, hilo de algodón, etc.<br>
+      - Laminado de cejas: productos químicos, productos naturales, etc.<br>
+      💰 Precios: desde $100 hasta $500 MXN.<br>
+      ⏳ Tiempo: 15 a 30 minutos.
+    </div>
+  </div>
+
+  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+
+</body>
+</html>

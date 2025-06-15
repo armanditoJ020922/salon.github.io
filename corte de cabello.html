@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corte de cabello</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #ffeef8, #fdd9ea);
+      font-family: 'Quicksand', sans-serif;
+      color: #5c3a4d;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #b05574;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .e {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 0 10px;
+    }
+
+    .letra {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      padding: 0 15px;
+      color: #b05574;
+      font-family: monospace;
+      font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #b05574;
+      width: 0;
+      animation: escribir 8s steps(120, end) forwards;
+    }
+
+    /* Listas con flores como viñetas */
+    .letra ul {
+      list-style: none;
+      padding-left: 1.2em;
+      margin-top: 0.4em;
+      margin-bottom: 1em;
+    }
+
+    .letra ul li {
+      position: relative;
+      margin-bottom: 0.4em;
+      padding-left: 1.8em;
+    }
+
+    .letra ul li::before {
+      content: "🌸";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.2em;
+      line-height: 1;
+    }
+
+    .im {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .im img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .volver-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #f9b5d0;
+      color: #5c3a4d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: fit-content;
+    }
+
+    .volver-btn:hover {
+      background-color: #f57cb4;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @keyframes escribir {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .e {
+        font-size: 18px;
+        padding: 0 10px;
+        max-width: 100%;
+      }
+
+      .letra {
+        font-size: 16px;
+        white-space: normal; /* permite que el texto haga wrap */
+        border-right: none; /* quita el cursor de máquina de escribir */
+        animation: none; /* desactiva animación */
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .im img {
+        max-width: 100%;
+      }
+
+      .volver-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .e {
+        font-size: 16px;
+      }
+
+      .volver-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Corte de cabello para mujer y hombre</h1>
+
+  <div class="e">
+    En el salón de belleza Naty's realizamos cortes de cabello para hombres, mujeres, niños y niñas.
+  </div>
+
+  <div class="letra">
+    <p>Tipos de cortes de cabello:</p>
+    <ul>
+      <li>Corte clásico $190.</li>
+      <li>Corte rapado $150.</li>
+      <li>Corte pompadour $250.</li>
+      <li>Undercut $300.</li>
+      <li>Corte fade $200.</li>
+      <li>Corte taper $150.</li>
+      <li>Corte mohicano $160.</li>
+      <li>Corte mullet $220.</li>
+      <li>Corte hongo $250.</li>
+      <li>Corte César $250.</li>
+    </ul>
+
+    <p>Técnicas de corte:</p>
+    <ul>
+      <li>Técnica desfilada: con tijeras o navaja, cortes desiguales.</li>
+    </ul>
+
+    <p>Cómo influyen los cortes:</p>
+    <ul>
+      <li>Aumentan la confianza y autoestima.</li>
+      <li>Promueven el crecimiento del cabello.</li>
+      <li>Transmiten profesionalismo y cuidado.</li>
+      <li>Mejoran la primera impresión.</li>
+    </ul>
+
+    <p>Corte de cabello:</p>
+    <p>Técnicas:</p>
+    <ul>
+      <li>Corte clásico: recto, en capas.</li>
+      <li>Corte moderno: asimétrico, con textura.</li>
+      <li>Corte de moda: degradado, con flequillo.</li>
+      <li>Corte para niños: bebés y pequeños.</li>
+    </ul>
+
+    <p>💰 Precios: desde $200 hasta $1,500 MXN.<br>
+      ⏳ Tiempo estimado: 30 min a 2 horas.
+    </p>
+  </div>
+
+  <div class="im">
+    <img src="corte.jpg" alt="Corte de cabello" />
+  </div>
+  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+
+</body>
+</html>

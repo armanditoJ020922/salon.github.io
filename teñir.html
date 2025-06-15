@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teñido de Cabello</title>
+
+  <!-- Fuente Google Quicksand -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #ffeef8, #fdd9ea);
+      margin: 0;
+      padding: 20px;
+      font-family: 'Quicksand', sans-serif;
+      color: #5c3a4d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #b05574;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .text-content {
+      font-family: monospace;
+      font-size: 20px;
+      color: #b05574;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #b05574;
+      animation: escribir 6s steps(100, end) forwards;
+      padding: 10px 15px;
+    }
+
+    @keyframes escribir {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .im {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .im img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .volver-btn {
+      display: block;
+      margin: 0 auto 20px;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #f9b5d0;
+      color: #5c3a4d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: fit-content;
+      text-align: center;
+    }
+
+    .volver-btn:hover {
+      background-color: #f57cb4;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .text-content {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .volver-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .volver-btn {
+        font-size: 13px;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>- Teñido de Cabello -</h1>
+    <div class="text-content">
+      ✨ Técnicas:<br>
+      - Tintes permanentes: tinte con amoníaco, sin amoníaco.<br>
+      - Tintes semipermanentes: con colorante vegetal o sintético.<br>
+      - Tintes temporales: spray o tizas de color.<br>
+      💰 Precios: desde $500 hasta $2,500 MXN.<br>
+      ⏳ Tiempo estimado: 1 a 3 horas.
+    </div>
+  </div>
+
+  <div class="im">
+    <img src="teñido.jpg" alt="" />
+  </div>
+
+  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+
+</body>
+</html>

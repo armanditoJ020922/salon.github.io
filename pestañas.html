@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios de Pestañas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffeef8, #fdd9ea);
+      font-family: 'Quicksand', sans-serif;
+      color: #5c3a4d;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      color: #b05574;
+      margin-bottom: 20px;
+      min-height: 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #b05574;
+      width: fit-content;
+      margin: 0 auto 20px;
+      animation: typing 3s steps(40, end), blink 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .card {
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .volver-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #f9b5d0;
+      color: #5c3a4d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .volver-btn:hover {
+      background-color: #f57cb4;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .card {
+        padding: 15px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .card {
+        padding: 12px;
+      }
+      .volver-btn {
+        font-size: 13px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="typewriter"></h1>
+
+  <div class="card">
+    <h2>1. Extensiones de Pestañas Pelo a Pelo (Clásicas)</h2>
+    <p>
+      <strong>Descripción:</strong> Se coloca una extensión sobre cada pestaña natural.<br>
+      <strong>Estilo:</strong> Natural y definido.<br>
+      <strong>Duración del procedimiento:</strong> 1.5 a 2 horas.<br>
+      <strong>Duración del efecto:</strong> 3 a 4 semanas (requiere retoque).<br>
+      <strong>Precio aproximado:</strong> $30 - $70 USD.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>2. Extensiones de Pestañas 2D, 3D o Volumen Ruso</h2>
+    <p>
+      <strong>Descripción:</strong> Se colocan 2 o más extensiones en una sola pestaña natural.<br>
+      <strong>Estilo:</strong> Más densas, con efecto dramático o glamuroso.<br>
+      <strong>Duración del procedimiento:</strong> 2 a 3 horas.<br>
+      <strong>Duración del efecto:</strong> 3 a 4 semanas.<br>
+      <strong>Precio aproximado:</strong> $50 - $120 USD.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>3. Extensiones Híbridas</h2>
+    <p>
+      <strong>Descripción:</strong> Combinación de pestañas clásicas y de volumen.<br>
+      <strong>Estilo:</strong> Natural pero con volumen adicional.<br>
+      <strong>Duración del procedimiento:</strong> 2 a 2.5 horas.<br>
+      <strong>Duración del efecto:</strong> 3 a 4 semanas.<br>
+      <strong>Precio aproximado:</strong> $45 - $100 USD.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>4. Lifting o Llaminado de Pestañas</h2>
+    <p>
+      <strong>Descripción:</strong> Riza y eleva las pestañas naturales; opcionalmente se tiñen.<br>
+      <strong>Estilo:</strong> Natural, ideal para quienes no quieren extensiones.<br>
+      <strong>Duración del procedimiento:</strong> 45 minutos a 1 hora.<br>
+      <strong>Duración del efecto:</strong> 6 a 8 semanas.<br>
+      <strong>Precio aproximado:</strong> $25 - $60 USD.
+    </p>
+  </div>
+
+  <a href="pagina.html" class="volver-btn">Volver a la página principal</a>
+
+  <script>
+    const text = "Tipos de Servicios de Pestañas";
+    let i = 0;
+    const speed = 60;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+
+</body>
+</html>
