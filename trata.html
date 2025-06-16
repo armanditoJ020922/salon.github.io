@@ -71,7 +71,26 @@
       margin-top: 15px;
       text-align: center;
     }
+.imagen {
+  text-align: center;
+  margin-top: 20px;
+}
 
+.imagen img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #e91e63; /* Marco rosa fuerte */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave */
+}
+
+/* Animación al pasar el mouse */
+.imagen img:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5); /* Sombra rosa fuerte (HotPink) */
+}
     .volver-btn {
       display: block;
       margin: 30px auto 0;
@@ -89,7 +108,6 @@
       text-align: center;
       width: fit-content;
     }
-
     .volver-btn:hover {
       background-color: #f57cb4;
       color: white;
@@ -203,8 +221,9 @@
       <p><strong>💰 Precios:</strong> desde $500 hasta $2,000 pesos mexicanos.</p>
       <p><strong>⏳ Tiempo de realización:</strong> 30 minutos a 2 horas.</p>
     </div>
-
-    <!-- 🌸 Botón para volver a la página principal -->
+<div class="imagen">
+      <img src="tra.jpg" alt="imagen de tratamiento capilar ">
+    </div>
     <a href="index.html" class="volver-btn">Volver a la página principal</a>
   </div>
 

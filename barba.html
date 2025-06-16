@@ -114,7 +114,6 @@
       color: white;
       transform: scale(1.05);
     }
-
     @media (max-width: 600px) {
       .text-content {
         font-size: 16px;
@@ -140,6 +139,26 @@
         padding: 10px 16px;
       }
     }
+    .imagen {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imagen img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #e91e63; /* Marco rosa fuerte */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave */
+}
+
+/* Animación al pasar el mouse */
+.imagen img:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5); /* Sombra rosa fuerte (HotPink) */
+}
   </style>
 </head>
 <body>
@@ -152,7 +171,9 @@
 
   <div class="im">
   </div>
-
+<div class="imagen">
+      <img src="bar.jpg" alt="imagen de barba">
+    </div>
   <a href="index.html" class="volver-btn">Volver a la página principal</a>
 
   <script>
@@ -189,6 +210,5 @@
 
     typeLine();
   </script>
-
 </body>
 </html>

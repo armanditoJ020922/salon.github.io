@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Depilación de cejas y laminado</title>
 
+
+<link rel="icon" type="image/png" href="k.png">
+
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
@@ -94,6 +98,26 @@
       color: white;
       transform: scale(1.05);
     }
+   .imagen {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imagen img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #e91e63; /* Marco rosa fuerte */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave */
+}
+
+/* Animación al pasar el mouse */
+.imagen img:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5); /* Sombra rosa fuerte (HotPink) */
+}
 
     @media (max-width: 600px) {
       h1 {
@@ -120,6 +144,9 @@
       - Laminado de cejas: productos químicos, productos naturales, etc.<br>
       💰 Precios: desde $100 hasta $500 MXN.<br>
       ⏳ Tiempo: 15 a 30 minutos.
+    </div>
+     <div class="imagen">
+      <img src="depi.jpg" alt="imagen de depilacion">
     </div>
   </div>
 

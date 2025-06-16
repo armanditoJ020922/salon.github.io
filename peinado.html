@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Peinados</title>
-
+<link rel="icon" type="image/png" href="k.png">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
 
@@ -70,7 +70,26 @@
         transform: translateY(0);
       }
     }
+ .imagen {
+  text-align: center;
+  margin-top: 20px;
+}
 
+.imagen img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #e91e63; /* Marco rosa fuerte */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave */
+}
+
+/* Animación al pasar el mouse */
+.imagen img:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5); /* Sombra rosa fuerte (HotPink) */
+}
     .volver-btn {
       display: block;
       margin: 30px auto 0;
@@ -121,8 +140,9 @@
       💰 Precios: desde $300 hasta $1,500 MXN.<br>
       ⏳ Tiempo: 30 minutos a 2 horas.
     </div>
-  </div>
-
+  </div><div class="imagen">
+      <img src="pe.jpg" alt="imagen de peinado">
+    </div>
   <a href="index.html" class="volver-btn">Volver a la página principal</a>
 
 </body>
